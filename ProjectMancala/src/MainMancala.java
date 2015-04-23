@@ -8,6 +8,9 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
 
+//jahjsjhdhjks
+//yghkjhjjjjjjjj
+
 public class MainMancala {
 
 	public static void main(String[] args) {
