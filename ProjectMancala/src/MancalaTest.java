@@ -7,9 +7,7 @@ public class MancalaTest
 {
     public static void main(String[] args) 
     {
-       BoardModel m;
-       m = new BoardModel();
-       BoardFrame g;
-       g = new BoardFrame(m, new RedRoundedBoard());
+        BoardModel m = new BoardModel();
+        new BoardFrame(m, new RedRoundedBoard());
     }
 }
