@@ -1,7 +1,9 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Shape;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -34,6 +36,8 @@ public class BoardFrame extends JFrame
         top.setLayout(new BorderLayout());
         JPanel mainPanel = new JPanel(); // Main Panel
         mainPanel.setLayout(new BorderLayout());
+        ShapeStyle rrb = new RedRoundedBoard();
+        ShapeStyle pac = new PacManBoard();
         
         //Red Rounded Board
         JButton b1 = new JButton("Red Rounded");
@@ -41,7 +45,20 @@ public class BoardFrame extends JFrame
 		b1.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent event) {
-				new BoardFrame(new BoardModel(), new RedRoundedBoard());
+				new BoardFrame(new BoardModel(), new ShapeStyle() {
+					
+					@Override
+					public Shape formatPitStyle(PitStyle p) {
+						// TODO Auto-generated method stub
+						return rrb.formatPitStyle(p);
+					}
+					
+					@Override
+					public Color formatPitColor() {
+						// TODO Auto-generated method stub
+						return rrb.formatPitColor();
+					}
+				});
 				dispose();
 			}
 		});
@@ -52,7 +69,20 @@ public class BoardFrame extends JFrame
 		b2.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent event) {
-				new BoardFrame(new BoardModel(), new PacManBoard());
+				new BoardFrame(new BoardModel(), new ShapeStyle() {
+					
+					@Override
+					public Shape formatPitStyle(PitStyle p) {
+						// TODO Auto-generated method stub
+						return pac.formatPitStyle(p);
+					}
+					
+					@Override
+					public Color formatPitColor() {
+						// TODO Auto-generated method stub
+						return pac.formatPitColor();
+					}
+				});
 				dispose();
 			}
 		});

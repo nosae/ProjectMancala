@@ -1,9 +1,7 @@
 /**
- * Main class for Mancala project.  Initializes a StyleFrame object.
- * @author Donovon Bacon
- * @author Hoang Luong
- * @author Alexander Ung
- * @version May 6, 2014
+ * PacManBoard implements the ShapeStyle interface and acts as a selectable style for the user.  
+ * @author Daniel Rica, Nosa Edogun, Brandon Mercado
+ * @version CS 151 Section 3
  */
 public class MancalaTest 
 {
@@ -13,6 +11,5 @@ public class MancalaTest
        m = new BoardModel();
        BoardFrame g;
        g = new BoardFrame(m, new RedRoundedBoard());
-    	//new StyleFrame();
     }
 }
