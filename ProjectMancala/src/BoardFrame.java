@@ -45,20 +45,7 @@ public class BoardFrame extends JFrame
 		b1.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent event) {
-				new BoardFrame(new BoardModel(), new ShapeStyle() {
-					
-					@Override
-					public Shape formatPitStyle(PitStyle p) {
-						// TODO Auto-generated method stub
-						return rrb.formatPitStyle(p);
-					}
-					
-					@Override
-					public Color formatPitColor() {
-						// TODO Auto-generated method stub
-						return rrb.formatPitColor();
-					}
-				});
+				new BoardFrame(new BoardModel(), rrb);
 				dispose();
 			}
 		});
@@ -69,20 +56,7 @@ public class BoardFrame extends JFrame
 		b2.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent event) {
-				new BoardFrame(new BoardModel(), new ShapeStyle() {
-					
-					@Override
-					public Shape formatPitStyle(PitStyle p) {
-						// TODO Auto-generated method stub
-						return pac.formatPitStyle(p);
-					}
-					
-					@Override
-					public Color formatPitColor() {
-						// TODO Auto-generated method stub
-						return pac.formatPitColor();
-					}
-				});
+				new BoardFrame(new BoardModel(), pac);
 				dispose();
 			}
 		});
